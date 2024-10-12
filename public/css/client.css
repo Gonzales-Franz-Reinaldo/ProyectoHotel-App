@@ -1,0 +1,1082 @@
+/* Reseteo de márgenes y paddings para todos los elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo del cuerpo de la página */
+body {
+    font-family: 'Lora', serif;
+    color: #4A3B30;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    /* flex: 1; */
+}
+
+/* Estilo del encabezado */
+.container-encabezado {
+    background-image: url('../images/encabezado.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    padding: 30px 20px;
+}
+
+.hotel {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.hotel img {
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+}
+
+.titulo {
+    margin: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.titulo a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+/* Barra de navegación al hacer scroll */
+.container-encabezado.fixed {
+    background-color: #1C3A4D;
+    height: 60px;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.secciones {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.secciones a {
+    color: #FFF8DC;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.secciones a:hover {
+    color: #CD853F;
+
+}
+.roles {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 8px;
+    z-index: 1000;
+}
+
+/* Estilo para el botón de menú hamburguesa */
+.dropbtn {
+    background-color: #FF7F50; 
+    color: #FFF; 
+    padding: 12px 12px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Icono dentro del botón */
+.dropbtn i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+/* Efecto hover en el botón */
+.dropbtn:hover {
+    background-color: #FF7F50; 
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFF;
+    min-width: 220px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    right: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    transform: translateY(10px);
+    opacity: 0;
+    z-index: 1000;
+}
+
+/* Mostrar el menú desplegable al hacer hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    transform: translateY(0);
+    opacity: 5;
+}
+
+/* Estilo para los enlaces dentro del menú */
+.dropdown-content a {
+    color: #333; /* Texto gris oscuro */
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    background-color: #FFF;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efecto hover en los enlaces */
+.dropdown-content a:hover {
+    background-color: #afafaffa; /* Fondo verde */
+    color: #FFF; /* Texto blanco */
+}
+
+/* Estilo para el icono del menú */
+.roles i {
+    font-size: 30px;
+    color: #FFF;
+    transition: color 0.3s ease;
+}
+
+/* Efecto hover en el icono del menú */
+.roles i:hover {
+    color: #FFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-about {
+    background-color: #f7f7f7;
+    padding: 50px;
+    border-radius: 15px;
+    margin: 20px auto;
+    max-width: 1200px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-out;
+}
+
+.container-about h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+    font-family: 'Georgia', serif;
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 600px;
+    text-align: left;
+    padding: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 500px;
+    padding: 20px;
+}
+
+.about-image img {
+    max-width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    animation: zoomIn 1s ease;
+}
+
+.about-services {
+    margin-top: 50px;
+}
+
+.about-services h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.service-card {
+    display: inline-block;
+    width: 200px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 1.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-card i {
+    font-size: 40px;
+    color: #e74c3c;
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+/* Estilo del pie de página */
+.container-pie {
+    background-color: #1C3A4D; /* Azul oscuro */
+    color: #FFF8DC;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: auto;
+}
+
+.container-pie a {
+    color: #FFF8DC;
+    text-decoration: none;
+}
+
+.container-pie a:hover {
+    color: #CD853F; /* Mostaza claro */
+}
+
+/* Estilo para imágenes dentro del contenido */
+.hotel-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.icon-admin {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+
+
+.volver-atras a {
+    text-decoration: none; /* Quita la línea subrayada */
+    color: #000; /* Cambia el color del texto */
+    font-weight: bold; /* Cambia el peso de la fuente */
+    display: flex; /* Utiliza flexbox para alinear elementos */
+    align-items: center; /* Centra verticalmente el icono y el texto */
+}
+
+.volver-atras a:hover {
+    color: #007BFF; /* Cambia el color del texto al pasar el ratón */
+}
+
+.volver-atras i {
+    margin-right: 5px; /* Añade un espacio entre el icono y el texto */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.ventana-flotante {
+    position: fixed;
+    top: 30%; /* Cambiado para posicionar más arriba */
+    left: 50%;
+    transform: translate(-50%, -30%); /* Ajustado para centrar la ventanilla horizontalmente y elevarla un poco más */
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 450px; /* Aumentado el ancho */
+    padding: 30px; /* Aumentado el padding para mayor espacio interior */
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+
+
+.ventana-flotante.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ventana-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.icono-confirmacion {
+    font-size: 60px; /* Aumentado el tamaño del ícono */
+    color: #4caf50;
+    margin-bottom: 15px; /* Mayor separación debajo del ícono */
+    animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+
+
+.boton_reserva a {
+    background-color: #FF7F50; /* Coral */
+    cursor: pointer;
+}
+
+.boton_reserva a:hover {
+    background-color: #B0E0E6; 
+    color: #6e6666; 
+}
+
+.boton_reserva a.boton-desactivado {
+    background-color: #ed4040; 
+    color: #AAA; 
+    cursor: not-allowed; 
+    pointer-events: none; 
+}
+
+
+
+
+
+
+
+.boton_reservaReserv a {
+    background-color: #ef3a2a; /* Coral */
+    cursor: pointer;
+}
+
+.boton_reservaReserv a:hover {
+    background-color: #B0E0E6; 
+    color: #6e6666; 
+}
+
+.boton_reservaReserv a.boton-desactivado {
+    background-color: #ed4040; 
+    color: #AAA; 
+    cursor: not-allowed; 
+    pointer-events: none; 
+}
+
+
+
+
+
+
+/* VANTANA FLOTANTE  */
+.ventana-flotante {
+    position: fixed;
+    top: 30%; /* Posición más arriba de la pantalla */
+    left: 50%;
+    transform: translate(-50%, -30%);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.ventana-flotante.mostrar {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ventana-contenido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icono-buscar {
+    font-size: 50px;
+    color: #3498db; /* Azul claro */
+    margin-bottom: 10px;
+    animation: bounce 1s ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+#form-buscar-reserva {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form-buscar-reserva label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+#form-buscar-reserva input {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+#form-buscar-reserva button {
+    background-color: #169b8b; /* Verde */
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-buscar-reserva button:hover {
+    background-color: #2bd1bb; /* Verde oscuro */
+}
+
+
+.cerrar-ventana {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.cerrar-ventana:hover {
+    color: #333;
+}
+
+
+
+
+
+
+
+.contenido-buscar-reservas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10x;
+    padding: 10px;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    animation: fadeIn 1s ease-out;
+    width: 100%;
+}
+
+.menu-reservas {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab-button {
+    background-color: #3498db; /* Azul */
+    color: white;
+    padding: 10px 20px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.tab-button:hover {
+    background-color: #2980b9; /* Azul oscuro */
+}
+
+.tab-button.active {
+    background-color: #2ecc71; /* Verde */
+}
+
+.seccion-contenido {
+    width: 100%;
+    display: none;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.seccion-contenido.activo {
+    display: block;
+}
+
+.reserva-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.reserva-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.reserva-card h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.reserva-card p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.sin_resultados{
+    text-align: center;
+    margin-top: 10px;
+}
+
+
+
+.contenido_reservas{
+    width: 60%;
+}
+
+
+
+
+.seccion-contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background-color: #f3f4f6;
+    border-radius: 10px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    animation: fadeIn 1s ease-out;
+    width: 100%;
+}
+
+
+
+
+.reserva-cardHisto {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+
+.reserva-cardHisto:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.reserva-card-headerHisto {
+    background-color: #3498db; /* Azul */
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reserva-card-headerHisto h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.estado {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.estado-confirmadaHisto {
+    background-color: #2ecc71; /* Verde */
+}
+
+.reserva-card-bodyHisto {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.reserva-infoHisto,
+.reserva-fechasHisto,
+.reserva-detalleHisto {
+    flex-basis: 30%;
+    margin-bottom: 10px;
+}
+
+.reserva-infoHisto p,
+.reserva-fechasHisto p,
+.reserva-detalleHisto p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.reserva-infoHisto p i,
+.reserva-fechasHisto p i,
+.reserva-detalleHisto p i {
+    margin-right: 8px;
+    color: #3498db; /* Azul */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+
+
+
+
+/* Estilo de la tarjeta de reserva */
+.reserva-cardSoli {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    width: 100%;
+}
+
+.reserva-cardSoli:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.reserva-card-headerSoli {
+    background-color: #e67e22; /* Naranja */
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reserva-card-headerSoli h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.estado {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.estado-pendienteSoli {
+    background-color: #f39c12; /* Amarillo */
+}
+
+.reserva-card-bodySoli {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.reserva-infoSoli,
+.reserva-fechasSoli,
+.reserva-detalleSoli {
+    flex-basis: 30%;
+    margin-bottom: 10px;
+}
+
+.reserva-infoSoliSoli p,
+.reserva-fechasSoliSoli p,
+.reserva-detalleSoliSoli p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.reserva-infoSoli p i,
+.reserva-fechasSoli p i,
+.reserva-detalleSoli p i {
+    margin-right: 8px;
+    color: #3498db; /* Azul */
+}
+
+.reserva-cardSoli-footerSoli {
+    padding: 15px;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.boton-editarSoli {
+    background-color: #e67e22; /* Naranja */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-editarSoli:hover {
+    background-color: #d35400; /* Naranja oscuro */
+}
+
+
+
+
+
+/* Estilo de la tarjeta de reserva */
+.reserva-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.reserva-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.reserva-card-header {
+    background-color: #e74c3c; /* Rojo */
+    color: #ffffff;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.reserva-card-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.estado {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.estado-rechazada {
+    background-color: #c0392b; /* Rojo oscuro */
+}
+
+.reserva-card-body {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.reserva-info,
+.reserva-fechas,
+.reserva-detalle {
+    flex-basis: 30%;
+    margin-bottom: 10px;
+}
+
+.reserva-info p,
+.reserva-fechas p,
+.reserva-detalle p {
+    font-size: 14px;
+    color: #555;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+
+.reserva-info p i,
+.reserva-fechas p i,
+.reserva-detalle p i {
+    margin-right: 8px;
+    color: #e74c3c; /* Rojo */
+}
+
+.reserva-card-footer {
+    padding: 15px;
+    text-align: center;
+    background-color: #f8d7da; /* Fondo rojo claro */
+}
+
+.mensaje-rechazo {
+    color: #e74c3c; /* Rojo */
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.boton-nueva-reserva {
+    background-color: #e74c3c; /* Rojo */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-nueva-reserva:hover {
+    background-color: #c0392b; /* Rojo oscuro */
+}
+
+
+
+
+
+.formulario-editar {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-out;
+    overflow: hidden;
+}
+
+.formulario-editar h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.form-group {
+    flex-basis: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.form-group input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #3498db; /* Azul */
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.boton-guardar,
+.boton-cancelar {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.boton-guardar {
+    background-color: #4caf50; /* Verde */
+    color: white;
+}
+
+.boton-guardar:hover {
+    background-color: #45a049; /* Verde oscuro */
+}
+
+.boton-cancelar {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+}
+
+.boton-cancelar:hover {
+    background-color: #c0392b; /* Rojo oscuro */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.mensaje_reserva{
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+}
