@@ -12,7 +12,11 @@ class ReservaController extends Controller
      */
     public function index()
     {
-        //
+        // Las reservas solo se deben llamar o listar las reservas que tengan un estado de confirmado estado == "Pendiente"
+        // $reservas = Reserva::all();
+        $reservas = Reserva::where('estado', 'Pendiente')->get();
+
+        return view('Admin.reservasRecientes', compact('reservas'));
     }
 
     /**
@@ -61,5 +65,29 @@ class ReservaController extends Controller
     public function destroy(Reserva $reserva)
     {
         //
+    }
+
+    /**
+     * Confirmar la reserva
+     */
+    public function confirmarReserva($id){
+
+        $reserva = Reserva::find($id);
+        $reserva->estado = 'Confirmado';
+        $reserva->save();
+
+        return response()->json(['success' => true]);
+    }
+
+    /**
+     * Cancelar la reserva
+     */
+    public function rechazarReserva($id){
+        
+        $reserva = Reserva::find($id);
+        $reserva->estado = 'Cancelado';
+        $reserva->save();
+
+        return response()->json(['success' => true]);
     }
 }

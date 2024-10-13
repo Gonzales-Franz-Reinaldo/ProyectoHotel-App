@@ -48,4 +48,15 @@ class Reserva extends Model
         'numero_noches',
         'fecha_confirm'
     ];
+
+    // Para refereciar con la tabla 
+    public function habitacion()
+    {
+        return $this->belongsTo(Habitacion::class, 'id_habitacion');
+    }
+
+    public function promocion()
+    {
+        return $this->belongsTo(Promocion::class, 'id_promocion');
+    }
 }

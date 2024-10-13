@@ -118,7 +118,7 @@
 /* Estilos Globales */
 body {
     margin: 0;
-    font-family: 'Arnoldboecklin', fantasy; /* Aplicar la fuente Arnoldboecklin */
+    
     background-color: var(--cream-color);
     background-image: url(); /* Añade aquí tu imagen de fondo local */
     background-size: cover;

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
     <link rel="stylesheet" href="{{ asset('css/client.css') }}">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>Hotel_Reservas</title>
 </head>
 
@@ -33,7 +34,7 @@
                         <i class="bi bi-list"></i>
                     </button>
                     <div class="dropdown-content">
-                        <a href="./Controles/login.php">Administración</a>
+                        <a href="{{ url('/admin') }}">Administración</a>
                         <a href="" id="openLoginModal">Tus Reservas</a>
                         <a href="javascript:cargarContenido('./Client/src/models/about.php')">Acerca de Nosotros</a>
                         <a href="#">Política de la Empresa</a>
@@ -43,7 +44,7 @@
         </div>
     </div>
 
-    <div class="contenido" id="contenido">
+    <div class="contenidos" id="contenidos">
         <!-- Contenido cargado dinámicamente aquí -->
     </div>
 
@@ -82,7 +83,7 @@
     </div>
 
 
-    <script src="./Client/public/js/scripts.js"></script>
+    <script src="{{asset('js/client.js')}}"></script>
 </body>
 
 </html>

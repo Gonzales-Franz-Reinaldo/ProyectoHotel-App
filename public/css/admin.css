@@ -1,0 +1,1112 @@
+
+.menu-navegacion {
+    background-color: #2c3e50;
+    padding: 10px;
+    height: 9%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ecf0f1;
+    transition: all 0.3s ease;
+}
+
+.menu-navegacion .home-link {
+    color: #ecf0f1;
+    font-size: 1.2em;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s ease;
+    margin-right: 20px;
+}
+
+.menu-navegacion .home-link:hover {
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+    transform: scale(1.1);
+}
+
+.menu-navegacion .perfil {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-navegacion .perfil img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    margin-right: 10px;
+}
+
+.menu-navegacion .perfil h2 {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ecf0f1;
+}
+
+.menu-navegacion .perfil p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
+.menu-navegacion .perfil img:hover {
+    transform: rotate(360deg);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.menu-navegacion a {
+    padding: 5px 10px;
+    background-color: #14849b6e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    margin-left: 10px;
+}
+
+.menu-navegacion a:hover {
+    background-color: #14849b6e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.menu-navegacion a i {
+    margin-right: 5px;
+}
+
+
+
+
+
+
+
+
+.contenido {
+    /* padding: 30px; */
+    background-color: #f3f4f6;
+    animation: fadeIn 1s ease-out;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.welcome-section h1 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    animation: slideInFromTop 1s ease-out;
+}
+
+.welcome-section p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.stat-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card i {
+    font-size: 2em;
+    color: #3498db;
+    margin-bottom: 10px;
+    animation: bounce 1s infinite;
+}
+
+.stat-card h3 {
+    font-size: 1.5em;
+    color: #34495e;
+    margin-bottom: 10px;
+}
+
+.stat-card p {
+    font-size: 2em;
+    color: #e74c3c;
+}
+
+.services-description {
+    background-color: #ecf0f1;
+    border-radius: 10px;
+    padding: 20px;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.services-description h2 {
+    font-size: 2em;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.services-description p {
+    font-size: 1.2em;
+    color: #7f8c8d;
+    line-height: 1.5;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromTop {
+    from { transform: translateY(-100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100px); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+
+
+
+
+
+
+
+
+#hotel-management-interface {
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-direction: column;
+    display: flex;
+}
+
+/* Menú de Navegación */
+.menu_navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_navegacion h2 {
+    font-size: 24px;
+    /* margin-bottom: 15px; */
+    color: #333;
+}
+
+.menu-opciones {
+    display: flex;
+    gap: 15px;
+    box-shadow: 1px 3px 4px -5px #555;
+    padding-bottom: 10px;
+}
+
+.menu-opciones a {
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.menu-opciones a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #FF7F50;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.menu-opciones a:hover {
+    color: #FF7F50;
+}
+
+.menu-opciones a:hover::after {
+    width: 100%;
+}
+
+/* Listado de Habitaciones */
+.habitaciones-lista {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+
+
+.habitacion-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    width: 480px;
+}
+
+.habitacion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.habitacion-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.habitacion-info {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.habitacion-info h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.habitacion-info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+    text-align: justify;
+}
+
+.habitacion-info span {
+    font-weight: bold;
+}
+
+.habitacion-actions {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 15px;
+    flex-wrap: wrap;
+    border-top: 1px solid #eaeaea;
+}
+
+
+
+/* Estilo base para ambos botones */
+.habitacion-actions .btn_verDetalles,
+.habitacion-actions .btn_editarHab {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    /* Bordes inicialmente transparentes */
+    background-color: transparent;
+    /* Fondo transparente */
+    transition: all 0.3s ease;
+    /* Transición suave */
+    position: relative;
+    /* Para posicionar el pseudo-elemento */
+    overflow: hidden;
+    /* Para ocultar el pseudo-elemento fuera del contenedor */
+}
+
+/* Estilo para el botón de "Ver Más Detalles" */
+.habitacion-actions .btn_verDetalles {
+    color: #007bff;
+    /* Texto en azul claro */
+    border-color: #007bff;
+    /* Bordes en azul claro */
+}
+
+/* Efecto hover para el botón de "Ver Más Detalles" */
+.habitacion-actions .btn_verDetalles:hover {
+    background-color: #007bff;
+    /* Fondo azul claro al pasar el ratón */
+    color: white;
+    /* Texto blanco en hover */
+    transform: scale(1.05);
+    /* Efecto de crecimiento */
+}
+
+/* Estilo para el botón de "Editar" */
+.habitacion-actions .btn_editarHab {
+    color: #28a745;
+    /* Texto en verde */
+    border-color: #28a745;
+    /* Bordes en verde */
+}
+
+/* Efecto hover para el botón de "Editar" */
+.habitacion-actions .btn_editarHab:hover {
+    background-color: #28a745;
+    /* Fondo verde al pasar el ratón */
+    color: white;
+    /* Texto blanco en hover */
+    transform: scale(1.05);
+    /* Efecto de crecimiento */
+}
+
+/* Animación especial en hover usando pseudo-elementos */
+.habitacion-actions .btn_verDetalles::before,
+.habitacion-actions .btn_editarHab::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    transition: transform 0.5s ease;
+    transform: translate(-75%, -75%) scale(0);
+    z-index: -1;
+    /* Coloca el pseudo-elemento detrás del texto del botón */
+}
+
+/* Activación de la animación al pasar el ratón */
+.habitacion-actions .btn_verDetalles:hover::before,
+.habitacion-actions .btn_editarHab:hover::before {
+    transform: translate(-75%, -75%) scale(1);
+}
+
+
+
+
+/* Modal de Edición */
+.modal-editar {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-contenido {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}
+
+.cerrar:hover {
+    color: #FF7F50;
+}
+
+
+
+.modal-contenido label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.modal-contenido input,
+.modal-contenido select,
+.modal-contenido textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.modal-contenido button {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF7F50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.modal-contenido button:hover {
+    background-color: #E06A4A;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.habitacion-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin: 10px 0;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.habitacion-info {
+    position: relative;
+}
+
+.habitacion-actions {
+    margin-top: 10px;
+    text-align: right;
+}
+
+.habitacion-actions button {
+    background-color: #FF7F50;
+    color: white;
+    padding: 8px 16px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.habitacion-actions button:hover {
+    background-color: #FF7F50;
+}
+
+.habitacion-detalles {
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    animation: fadeIn 0.5s;
+}
+
+
+
+
+.habitacion-detalles {
+    margin-top: 15px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    display: none;
+    /* Por defecto oculto */
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    overflow: hidden;
+    /* Para suavizar la animación */
+}
+
+.habitacion-detalles.mostrar {
+    display: flex;
+    /* Cambia a flex cuando se muestre */
+}
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+.container-edit-habitacion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+}
+
+.container-edit-habitacion .edit-habitacion-form {
+    width: 90%;
+    max-width: 1000px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.edit-habitacion-form:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.edit-habitacion-form h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.contenido-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+.contenido-datos {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.datos-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+    padding: 15px;
+}
+
+.datos-form label {
+    font-weight: 600;
+    color: #555;
+}
+
+.datos-form select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.datos-form input, .content-img select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.datos-form input:focus, .content-img select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+.content-img {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 50%;
+    padding: 15px;
+    align-items: center;
+    border-left: 1px solid #ddd;
+}
+
+.content-img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.content-img img:hover {
+    transform: scale(1.05);
+}
+
+.content-img label {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #555;
+}
+
+.content-img input[type="file"] {
+    border: none;
+}
+
+.descripciones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    padding: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.full-width textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.full-width textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+    outline: none;
+}
+
+#descripcion_completa{
+    height: 130px;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+}
+
+
+
+.form-actions .btn-save,
+.form-actions .btn-cancel {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: 2px solid transparent;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.form-actions .btn-save {
+    color: #28a745;
+    border-color: #28a745;
+}
+
+.form-actions .btn-save:hover {
+    background-color: #28a745;
+    color: white;
+    transform: scale(1.05);
+}
+
+.form-actions .btn-cancel {
+    color: #f62828;
+    border-color: #f62828;
+}
+
+.form-actions .btn-cancel:hover {
+    background-color: #f62828;
+    color: white;
+    transform: scale(1.05);
+}
+
+.form-actions .btn-save::before,
+.form-actions .btn-cancel::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+    transition: transform 0.5s ease;
+    transform: translate(-75%, -75%) scale(0);
+    z-index: -1;
+}
+
+.form-actions .btn-save:hover::before,
+.form-actions .btn-cancel:hover::before {
+    transform: translate(-75%, -75%) scale(1);
+}
+
+
+
+
+.file-input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 400px;
+}
+
+.file-input-wrapper input[type="file"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-input-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f8f9fa;
+    color: #555;
+    font-size: 1em;
+    text-align: center;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.file-input-text:hover {
+    background-color: #e9ecef;
+    border-color: #007bff;
+    color: #007bff;
+}
+
+.file-input-text::after {
+    content: '📁';
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.content-img img {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.content-img img:hover {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilos Generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+
+.menu-opciones a {
+    /* color: #fff; */
+    text-decoration: none;
+    padding: 8px 12px;
+    display: inline-block;
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+/* Gestión de Habitaciones */
+.habitaciones-lista {
+    text-align: center;
+    /* margin-top: 30px; */
+}
+
+
+
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #2275d3, #6a11cb, #ff7e5f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+}
+
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.habitaciones-lista .habitacion {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.habitaciones-lista .habitacion:hover {
+    transform: translateY(-10px);
+}
+
+.habitacion img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.habitacion h3 {
+    font-size: 2rem;
+    margin-top: 10px;
+    color: #333;
+}
+
+.habitacion p {
+    color: #666;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.habitacion .precio {
+    font-size: 1.5rem;
+    color: #E53935;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.habitacion .estado {
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.estado-disponible {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+.estado-mantenimiento {
+    background-color: #FFC107;
+    color: #fff;
+}
+
+.estado-reservado {
+    background-color: #2196F3;
+    color: #fff;
+}
+
+.estado-limpieza {
+    background-color: #FF5722;
+    color: #fff;
+}
+
+/* Efecto de botón de acción */
+.btn-action {
+    background-color: #2196F3;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-action:hover {
+    background-color: #1976D2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESERVAS RECHAZADAS  */
+.reservas-rechazadas {
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    padding: 10px;
+    background-color: #f5f5f5;
+    /* justify-content: center; */
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.contenido-reservas-rechazadas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.reserva_card_deled {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 350px;
+    gap: 10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+.reserva_card_deled:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.reserva-info h3 {
+    margin: 0;
+    color: #333;
+}
+
+.reserva-info p {
+    margin: 5px 0;
+    color: #666;
+}
+
+.reserva-actions {
+    display: flex;
+    align-items: center;
+}
+
+.delete-button {
+    background-color: #ff4d4f;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-button:hover {
+    background-color: #d9363e;
+}
+
+.delete-icon {
+    font-size: 18px;
+    color: #fff;
+    pointer-events: none;
+}
+
+.delete-icon {
+    font-size: 18px; /* Tamaño del icono */
+    color: #fff; /* Color blanco para contrastar con el fondo rojo del botón */
+    pointer-events: none; /* Para evitar que el clic afecte al icono en lugar del botón */
+}
