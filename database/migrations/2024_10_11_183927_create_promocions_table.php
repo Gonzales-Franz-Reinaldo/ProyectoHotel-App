@@ -14,12 +14,12 @@ return new class extends Migration
         Schema::create('promociones', function (Blueprint $table) {
             $table->id(); // auto_increment y primary key
             $table->string('tipo_promocion', 100);
-            $table->dateTime('fecha_final');
-            $table->dateTime('fecha_inicio');
+            $table->date('fecha_inicio');
+            $table->date('fecha_final');
             $table->string('condicion_promo', 100);
             $table->integer('descuento'); // Sin auto_increment
             $table->string('descripcion', 100);
-            $table->string('descripcion_completa', 500);
+            $table->text('descripcion_completa');
             $table->string('imagen', 255);
             $table->enum('estado', ['Activo', 'Inactivo']);
             $table->timestamps();

@@ -1,6 +1,10 @@
 
 # COMANDOS.
 
+
+## Para crear un poryecto en laravel
+composer create-project --prefer-dist laravel/laravel Nombre-proyecto
+
 ## correr laravel
 php artisan serve
 ## correr migraciones
@@ -27,3 +31,9 @@ Necesitamos configurar los archivos
 - Carpeta modelos-> Promocion.php
 - Todo dentro la carpeta database
 - PromocionFactory.php, archivo migraciones, PromocionSeeder y DataBaseSeeder
+
+# PRIMER SPRINT 
+## HISTORIAS A REALIZAR
+
+- Como [recepcionista], quiero [ver las reservas recientes], para poder [confirmar o rechazar estas mismas]
+- Como [cliente], quiero [vizualizar las promociones y descuentos], para poder [tomar en cuenta el beneficio]

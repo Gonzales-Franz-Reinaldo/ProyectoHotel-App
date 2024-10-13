@@ -28,7 +28,7 @@ return new class extends Migration
             $table->integer('num_piso');
             $table->enum('tipo_hab', ['Simple', 'Especial', 'Matrimonial', 'Familiar']);
             $table->integer('capacidad');
-            $table->string('descripcion', 100);
+            $table->string('descripcion', 500);
             $table->string('foto', 255);
             $table->decimal('precio', 8, 2);
             $table->enum('estado', ['Disponible', 'Mantenimiento', 'Limpieza', 'Reservado']);
