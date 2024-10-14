@@ -12,7 +12,8 @@ class PromocionController extends Controller
      */
     public function index()
     {
-        //
+        $promociones = Promocion::all(); // Obtener todas las promociones
+        return view('promociones', compact('promociones')); // Pasar a la vista
     }
 
     /**
@@ -34,9 +35,14 @@ class PromocionController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Promocion $promocion)
+    // Mostrar los detalles de una promoción
+    public function show($id)
     {
-        //
+        $promocion = Promocion::find($id); // Obtener promoción por ID
+        if (!$promocion) {
+            return redirect()->route('promociones')->with('error', 'Promoción no encontrada.');
+        }
+        return view('descripciones', compact('promocion'));
     }
 
     /**

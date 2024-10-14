@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReservaController;
+use App\Http\Controllers\PromocionController;
 
 // Ruta principal del sistema
 Route::get('/', function () {
@@ -32,3 +33,7 @@ Route::post('/admin/reservas/rechazar/{id}', [ReservaController::class, 'rechaza
 
 // Ruta para los filtros de las reservas
 Route::get('/reservas-filtrar', [ReservaController::class, 'filtrarReservas'])->name('reservas.filtrar');
+
+//Promociones
+Route::get('/promociones', [PromocionController::class, 'index'])->name('promociones');
+Route::get('/promociones/{id}', [PromocionController::class, 'show'])->name('promocion.detalle');
