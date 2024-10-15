@@ -34,6 +34,21 @@ Route::post('/admin/reservas/rechazar/{id}', [ReservaController::class, 'rechaza
 // Ruta para los filtros de las reservas
 Route::get('/reservas-filtrar', [ReservaController::class, 'filtrarReservas'])->name('reservas.filtrar');
 
-//Promociones
-Route::get('/promociones', [PromocionController::class, 'index'])->name('promociones');
-Route::get('/promociones/{id}', [PromocionController::class, 'show'])->name('promocion.detalle');
+// Rutas para las promociones
+Route::get('/client/promociones', [PromocionController::class, 'index'])->name('client.promociones');
+
+// Ruta para los detalles de una promoción
+Route::get('/client/descripciones/{id}', [PromocionController::class, 'show'])->name('Client.descripciones');
+
+//Ruta para cargar las consultas
+Route::get('/client/consultas', function () {
+    return view('Client.consultas');
+});
+
+
+// Ruta para cargar las reservas recientes desde el controlador
+Route::get('/admin/reservasPendiente', [ReservaController::class, 'index'])->name('Admin.reservasPendiente');
+
+
+// Ruta para mostras el hostorial de reservas 
+Route::get('/admin/historialReservas', [ReservaController::class, 'historialReserva'])->name('Admin.historialReservas');

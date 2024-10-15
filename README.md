@@ -37,3 +37,10 @@ Necesitamos configurar los archivos
 
 - Como [recepcionista], quiero [ver las reservas recientes], para poder [confirmar o rechazar estas mismas]
 - Como [cliente], quiero [vizualizar las promociones y descuentos], para poder [tomar en cuenta el beneficio]
+
+
+creamos nuevo branch con nombre de develop, seting - repositorio, en branch defauld poner por defecto el develop
+- En protected branch poner develop como protegida
+- Allowed to merge poner Manteiners
+- push merge, none
+- y poner en buton Protegido

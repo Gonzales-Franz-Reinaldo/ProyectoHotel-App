@@ -22,7 +22,8 @@
                 </div>
                 <div class="menu">
                     <div class="secciones"><a href="javascript:cargarPrincipal('./Client/src/views/inicio.html')">Inicio</a></div>
-                    <div class="secciones"><a href="{{route('promociones') }}">Promociones</a></div>
+                    <!-- <div class="secciones"><a href="{{ route('client.promociones') }}">Promociones</a></div> -->
+                    <div class="secciones"><a href="javascript:void(0);" onclick="cargarPromociones('/client/promociones')">Promociones</a>
                     <div class="secciones"><a href="javascript:cargarInicioHabitaciones('./Client/src/models/tipos_habitaciones.php')">Habitaciones</a></div>
                     <div class="secciones"><a href="javascript:cargarContenido('./Client/src/models/about.php')">Acerca de Nosotros</a></div>
                 </div>

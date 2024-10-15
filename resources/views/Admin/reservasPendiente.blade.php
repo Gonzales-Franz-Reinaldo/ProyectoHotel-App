@@ -92,5 +92,5 @@
                     $nro++;
                 @endphp
             @endforeach
-        </div>
+        </div>
 </div>

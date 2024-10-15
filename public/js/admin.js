@@ -10,7 +10,7 @@ function cargarContenido(url){
 
 
 
-function cargarReservasRecientes(url) {
+function cargarReservas(url) {
     var reservaContenido = document.getElementById('reserva-contenido');
     fetch(url)
         .then(response => response.text())
@@ -36,7 +36,7 @@ function confirmarReserva(id) {
             cargarReservasRecientes('admin/reservasRecientes');
         }
     })
-    .catch(error => console.error('Error al confirmar la reserva:', error));
+
 }
 
 
@@ -55,5 +55,23 @@ function rechazarReserva(id) {
             cargarReservasRecientes('admin/reservasRecientes');
         }
     })
-    .catch(error => console.error('Error al cancelar la reserva:', error));
+
+}   
+
+
+
+function realizarBusqueda() {
+    const busquedaDatos = document.getElementById('busquedaDatos').value;
+    const fechaReserva = document.getElementById('fechaReserva').value;
+    const tipoHabitacion = document.getElementById('tipoHabitacion').value;
+    const ordenarTipo = document.getElementById('ordenarTipo').value;
+
+    fetch('{{ route("admin.reservasRecientesFilters") }}?busquedaGeneral=' + busquedaDatos + '&fechaReserva=' + fechaReserva + '&tipoHabitacion=' + tipoHabitacion + '&ordenarTipo=' + ordenarTipo)
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById('reservas-container').innerHTML = data.html;
+        })
+        .catch(error => console.error('Error:', error));
+
+    return false;
 }

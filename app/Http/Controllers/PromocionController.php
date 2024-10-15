@@ -13,7 +13,7 @@ class PromocionController extends Controller
     public function index()
     {
         $promociones = Promocion::all(); // Obtener todas las promociones
-        return view('promociones', compact('promociones')); // Pasar a la vista
+        return view('client/promociones', compact('promociones')); // Pasar a la vista
     }
 
     /**
@@ -38,13 +38,12 @@ class PromocionController extends Controller
     // Mostrar los detalles de una promoción
     public function show($id)
     {
-        $promocion = Promocion::find($id); // Obtener promoción por ID
+        $promocion = Promocion::find($id); // Buscar la promoción por su ID
         if (!$promocion) {
-            return redirect()->route('promociones')->with('error', 'Promoción no encontrada.');
+            return redirect()->route('client.promociones')->with('error', 'Promoción no encontrada.');
         }
-        return view('descripciones', compact('promocion'));
+        return view('Client.descripciones', compact('promocion')); // Vista de detalles
     }
-
     /**
      * Show the form for editing the specified resource.
      */
